@@ -1,0 +1,19 @@
+p{color: brown; 
+font-size: xx-large;}
+/* all p is going to be this distinction  */
+p1{color: blue; 
+    font-size: xx-large;}
+    /* all p is going to be this distinction  */
+
+/* Ensure the map container has a height and width */
+#pointmap {
+    height: 640px;  /* Set the height as per your previous example */
+    width: 100%;    /* Optional: makes the map take full width of the container */
+}
+
+/* Ensure the second map container has a height and width */
+#coolmap {
+    height: 640px;  /* Set the height as per your previous example */
+    width: 100%;
+    /*margin-top: 100px;    /* Optional: makes the map take full width of the container */
+}
