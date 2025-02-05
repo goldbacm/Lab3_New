@@ -17,3 +17,7 @@ p1{color: blue;
     width: 100%;
     /*margin-top: 100px;    /* Optional: makes the map take full width of the container */
 }
+
+#maptitle{
+    text-align: center;
+}

@@ -78,11 +78,20 @@ L.geoJson(data, {
          geojsonMarkerOptions.fillColor = getcolor(attValue);
          //get the big cities to appear in front
          geojsonMarkerOptions.zIndex = attValue;
-        //create circle markers
+       //create circle markers
         return L.circleMarker(latlng, geojsonMarkerOptions);
+    },
+    //add popups and list out the name and population amount
+    onEachFeature: (feature, layer) => {
+        // Add popups with city information
+        var state = feature.properties.ST;
+        var city = feature.properties.NAME;
+        var population = feature.properties.POPULATION.toLocaleString();
+        layer.bindPopup(`<b>State: ${state}</b><br> City: ${city}</b><br>Population: ${population}`);
     }
 }).addTo(map);
 };
+
 
 // Create the legend control
 var legend = L.control({ position: "bottomright" });
